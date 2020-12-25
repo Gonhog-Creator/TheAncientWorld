@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "aa ",
+    "as ",
+    " s "
+  ],
+  "key":
+  {
+    "a":
+    {
+      "item": "theancientworld:adamant_plate"
+    },
+    "s":
+    {
+      "item": "minecraft:stick"
+    }
+  },
+
+  "result":
+  {
+    "item": "theancientworld:adamant_axe",
+    "count": 1
+  }
+}

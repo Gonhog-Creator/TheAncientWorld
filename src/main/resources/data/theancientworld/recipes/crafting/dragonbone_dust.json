@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "theancientworld:dragonbone"
+    },
+    {
+      "item": "theancientworld:dragonbone_pestle"
+    }
+  ],
+  "result":
+  {
+    "item": "theancientworld:dragonbone_dust",
+    "count": 1
+  }
+}

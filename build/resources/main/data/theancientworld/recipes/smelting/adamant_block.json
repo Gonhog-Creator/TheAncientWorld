@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "minecraft:diamond_block"
+  },
+  "result": "theancientworld:adamant_block",
+  "experience": 0.0,
+  "cookingtime": 200
+}

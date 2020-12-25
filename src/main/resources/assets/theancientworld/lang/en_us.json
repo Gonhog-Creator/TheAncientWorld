@@ -1,0 +1,24 @@
+{
+
+  "item.theancientworld.adamant_plate": "Adamant Plate",
+  "item.theancientworld.dragonbone": "Dragonbone",
+  "item.theancientworld.dragonbone_dust": "Dragonbone Dust",
+  "item.theancientworld.dragonbone_pestle": "Dragonbone Pestle",
+  "item.theancientworld.raw_satyr_meat": "Satyr Meat",
+  "item.theancientworld.cooked_satyr_meat": "Cooked Satyr Meat",
+  "item.theancientworld.invisibility_glove": "Glove of Invisibility",
+
+  "item.theancientworld.adamant_sword": "Adamant Sword",
+  "item.theancientworld.adamant_axe": "Adamant Axe",
+  "item.theancientworld.adamant_hoe": "Adamant Hoe",
+  "item.theancientworld.adamant_pickaxe": "Adamant Pickaxe",
+  "item.theancientworld.adamant_shovel": "Adamant Shovel",
+  "item.theancientworld.adamant_helm": "Adamant Helm,",
+  "item.theancientworld.adamant_chestplate": "Adamant Chestplate",
+  "item.theancientworld.adamant_leggings": "Adamant Leggings",
+  "item.theancientworld.adamant_boots": "Adamant Boots",
+
+  "block.theancientworld.adamant_block": "Adamant Block",
+
+  "itemGroup.theancientworld_TAB": "The Ancient World"
+}
