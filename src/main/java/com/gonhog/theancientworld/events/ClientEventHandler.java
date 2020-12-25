@@ -43,7 +43,7 @@ public class ClientEventHandler {
             } if (offhand == glove && !notMoving) {
                 mob.setAttackTarget(event.getTarget());
             }
-            
+
         }
     }
 }
