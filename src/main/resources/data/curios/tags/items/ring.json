@@ -1,0 +1,13 @@
+{
+  "replace": "false",
+  "values": [
+    "theancientworld:enchanted_eyes_ring",
+    "theancientworld:potion_ring",
+    "theancientworld:resistance_ring",
+    "theancientworld:regen_ring",
+    "theancientworld:haste_ring",
+    "theancientworld:speed_ring",
+    "theancientworld:jump_ring",
+    "theancientworld:strength_ring"
+  ]
+}

@@ -1,0 +1,7 @@
+
+#General settings
+[general]
+	#Rotation speed of the magic block
+	#Range: 0.0 ~ 1000000.0
+	rotationSpeed = 100.0
+

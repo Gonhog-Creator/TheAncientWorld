@@ -1,0 +1,98 @@
+---- Minecraft Crash Report ----
+// Don't be sad. I'll do better next time, I promise!
+
+Time: 1/20/21 1:49 PM
+Description: Ticking player
+
+java.lang.ClassCastException: net.minecraftforge.common.util.LazyOptional cannot be cast to top.theillusivec4.curios.api.type.capability.ICuriosItemHandler
+	at com.gonhog.theancientworld.items.potionRings.StrengthRing.inventoryTick(StrengthRing.java:33) ~[?:?] {re:classloading}
+	at net.minecraft.item.ItemStack.inventoryTick(ItemStack.java:496) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.player.PlayerInventory.tick(PlayerInventory.java:265) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.player.PlayerEntity.livingTick(PlayerEntity.java:514) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.LivingEntity.tick(LivingEntity.java:2305) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.player.PlayerEntity.tick(PlayerEntity.java:227) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.player.ServerPlayerEntity.playerTick(ServerPlayerEntity.java:422) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.network.play.ServerPlayNetHandler.tick(ServerPlayNetHandler.java:212) ~[forge:?] {re:classloading}
+	at net.minecraft.network.NetworkManager.tick(NetworkManager.java:248) ~[forge:?] {re:classloading}
+	at net.minecraft.network.NetworkSystem.tick(NetworkSystem.java:151) ~[forge:?] {re:classloading}
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:898) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:820) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:84) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:663) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$startServer$0(MinecraftServer.java:233) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_275] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at com.gonhog.theancientworld.items.potionRings.StrengthRing.inventoryTick(StrengthRing.java:33) ~[?:?] {re:classloading}
+	at net.minecraft.item.ItemStack.inventoryTick(ItemStack.java:496) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.player.PlayerInventory.tick(PlayerInventory.java:265) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.player.PlayerEntity.livingTick(PlayerEntity.java:514) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.LivingEntity.tick(LivingEntity.java:2305) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.player.PlayerEntity.tick(PlayerEntity.java:227) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+-- Player being ticked --
+Details:
+	Entity Type: minecraft:player (net.minecraft.entity.player.ServerPlayerEntity)
+	Entity ID: 171
+	Entity Name: Dev
+	Entity's Exact location: -221.67, 84.00, -241.53
+	Entity's Block location: World: (-222,84,-242), Chunk: (at 2,5,14 in -14,-16; contains blocks -224,0,-256 to -209,255,-241), Region: (-1,-1; contains chunks -32,-32 to -1,-1, blocks -512,0,-512 to -1,255,-1)
+	Entity's Momentum: 0.00, -0.08, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at net.minecraft.entity.player.ServerPlayerEntity.playerTick(ServerPlayerEntity.java:422) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.network.play.ServerPlayNetHandler.tick(ServerPlayNetHandler.java:212) ~[forge:?] {re:classloading}
+	at net.minecraft.network.NetworkManager.tick(NetworkManager.java:248) ~[forge:?] {re:classloading}
+	at net.minecraft.network.NetworkSystem.tick(NetworkSystem.java:151) ~[forge:?] {re:classloading}
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:898) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:820) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:84) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:663) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$startServer$0(MinecraftServer.java:233) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_275] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.4
+	Minecraft Version ID: 1.16.4
+	Operating System: Mac OS X (x86_64) version 10.14.6
+	Java Version: 1.8.0_275, Amazon.com Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Amazon.com Inc.
+	Memory: 1487452768 bytes (1418 MB) / 1919942656 bytes (1831 MB) up to 3817865216 bytes (3641 MB)
+	CPUs: 4
+	JVM Flags: 1 total; -Xss1M
+	ModLauncher: 8.0.6+85+master.325de55
+	ModLauncher launch target: fmluserdevclient
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		/mixin-0.8.2.jar mixin PLUGINSERVICE 
+		/eventbus-3.0.5-service.jar eventbus PLUGINSERVICE 
+		/forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-launcher.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-launcher.jar runtime_enum_extender PLUGINSERVICE 
+		/accesstransformers-2.2.0-shadowed.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-launcher.jar capability_inject_definalize PLUGINSERVICE 
+		/forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-launcher.jar runtimedistcleaner PLUGINSERVICE 
+		/mixin-0.8.2.jar mixin TRANSFORMATIONSERVICE 
+		/forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-launcher.jar fml TRANSFORMATIONSERVICE 
+	FML: 35.1
+	Forge: net.minecraftforge:35.1.4
+	FML Language Providers: 
+		javafml@35.1
+		minecraft@1
+	Mod List: 
+		client-extra.jar                                  |Minecraft                     |minecraft                     |1.16.4              |DONE      |a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		main                                              |The Ancient World             |theancientworld               |1.16.4 -1.0         |DONE      |NOSIGNATURE
+		forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.|Forge                         |forge                         |35.1.4              |DONE      |NOSIGNATURE
+		curios-forge-1.16.4-4.0.3.4_mapped_snapshot_202010|Curios API                    |curios                        |1.16.4-4.0.3.4      |DONE      |NOSIGNATURE
+	Crash Report UUID: 46a9bb3e-3bf5-42c5-9262-0ce5c829d4cb
+	Player Count: 1 / 8; [ServerPlayerEntity['Dev'/171, l='ServerLevel[Dev]', x=-221.67, y=84.00, z=-241.53]]
+	Data Packs: vanilla, mod:theancientworld, mod:forge, mod:curios
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'forge'

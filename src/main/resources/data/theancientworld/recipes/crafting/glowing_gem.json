@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "ipi",
+    "pdp",
+    "ipi"
+  ],
+  "key":
+  {
+    "d":
+    {
+      "item": "minecraft:diamond_block"
+    },
+    "p":
+    {
+      "item": "theancientworld:glowing_powder"
+    },
+    "i":
+    {
+      "item": "theancientworld:glowing_ingot"
+    }
+  },
+  "result":
+  {
+    "item": "theancientworld:glowing_gem",
+    "count": 1
+  }
+}

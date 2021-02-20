@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "gig",
+    "ipi",
+    "gig"
+  ],
+  "key":
+  {
+    "p":
+    {
+      "item": "theancientworld:potion_ring"
+    },
+    "i":
+    {
+      "item": "minecraft:rabbit_foot"
+    },
+    "g":
+    {
+      "item": "theancientworld:glowing_gem"
+    }
+  },
+  "result":
+  {
+    "item": "theancientworld:jump_ring",
+    "count": 1
+  }
+}

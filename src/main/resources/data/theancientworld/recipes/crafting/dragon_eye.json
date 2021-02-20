@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "rdg",
+    "dhd",
+    "gdg"
+  ],
+  "key":
+  {
+    "r":
+    {
+      "item": "theancientworld:enchanted_eyes_ring"
+    },
+    "d":
+    {
+      "item": "minecraft:diamond_sword"
+    },
+    "g":
+    {
+      "item": "theancientworld:glowing_gem"
+    },
+    "h":
+    {
+      "item": "minecraft:dragon_head"
+    }
+  },
+  "result":
+  {
+    "item": "theancientworld:dragon_eye",
+    "count": 1
+  }
+}

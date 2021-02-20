@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "facing=north": { "model": "theancientworld:block/living_pumpkin" },
+    "facing=south": { "model": "theancientworld:block/living_pumpkin", "y": 180 },
+    "facing=west": { "model": "theancientworld:block/living_pumpkin", "y": 270 },
+    "facing=east": { "model": "theancientworld:block/living_pumpkin", "y": 90 },
+    "facing=up": { "model": "theancientworld:block/living_pumpkin", "x": -90 },
+    "facing=down": { "model": "theancientworld:block/living_pumpkin", "x": 90 }
+  }
+}

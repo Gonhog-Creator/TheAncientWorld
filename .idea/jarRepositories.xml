@@ -26,5 +26,25 @@
       <option name="name" value="maven" />
       <option name="url" value="https://files.minecraftforge.net/maven/" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven" />
+      <option name="name" value="maven" />
+      <option name="url" value="https://maven.theillusivec4.top/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven2" />
+      <option name="name" value="maven2" />
+      <option name="url" value="http://mobiusstrip.eu/maven" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven3" />
+      <option name="name" value="maven3" />
+      <option name="url" value="http://maven.tterrag.com/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven2" />
+      <option name="name" value="maven2" />
+      <option name="url" value="https://repo.repsy.io/mvn/gandiber/geckolib" />
+    </remote-repository>
   </component>
 </project>

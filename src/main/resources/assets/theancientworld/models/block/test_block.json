@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "theancientworld:blocks/test_block",
+    "down": "theancientworld:blocks/test_block",
+    "up": "theancientworld:blocks/test_block",
+    "east": "theancientworld:blocks/test_block",
+    "west": "theancientworld:blocks/test_block",
+    "north": "theancientworld:blocks/test_block_front",
+    "south": "theancientworld:blocks/test_block"
+  }
+}

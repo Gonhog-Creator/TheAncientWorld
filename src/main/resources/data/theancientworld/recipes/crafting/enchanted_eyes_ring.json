@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "gi ",
+    "ici",
+    " i "
+  ],
+  "key":
+  {
+    "g":
+    {
+      "item": "theancientworld:glowing_ingot"
+    },
+    "i":
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    "c":
+    {
+      "item": "minecraft:golden_carrot"
+    }
+  },
+  "result":
+  {
+    "item": "theancientworld:enchanted_eyes_ring",
+    "count": 1
+  }
+}

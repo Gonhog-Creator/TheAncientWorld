@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "gbg",
+    "bib",
+    "gbg"
+  ],
+  "key":
+  {
+    "g":
+    {
+      "item": "minecraft:glowstone_dust"
+    },
+    "i":
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    "b":
+    {
+      "item": "minecraft:blaze_powder"
+    }
+  },
+  "result":
+  {
+    "item": "theancientworld:glowing_ingot",
+    "count": 1
+  }
+}

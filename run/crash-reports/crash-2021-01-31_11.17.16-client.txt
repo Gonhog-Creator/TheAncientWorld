@@ -1,0 +1,138 @@
+---- Minecraft Crash Report ----
+// On the bright side, I bought you a teddy bear!
+
+Time: 1/31/21 11:17 AM
+Description: Rendering entity in world
+
+software.bernie.geckolib3.geo.exception.GeoModelException: theancientworld:geo/satyr.geo.json: Could not find model.
+	at software.bernie.geckolib3.model.AnimatedGeoModel.getModel(AnimatedGeoModel.java:107) ~[forge-1.16.5-geckolib-3.0.4a_mapped_snapshot_20201028-1.16.3.jar:3.0.4a] {re:classloading}
+	at software.bernie.geckolib3.renderers.geo.GeoEntityRenderer.render(GeoEntityRenderer.java:121) ~[forge-1.16.5-geckolib-3.0.4a_mapped_snapshot_20201028-1.16.3.jar:3.0.4a] {re:classloading}
+	at software.bernie.geckolib3.renderers.geo.GeoEntityRenderer.render(GeoEntityRenderer.java:38) ~[forge-1.16.5-geckolib-3.0.4a_mapped_snapshot_20201028-1.16.3.jar:3.0.4a] {re:classloading}
+	at net.minecraft.client.renderer.entity.EntityRendererManager.renderEntityStatic(EntityRendererManager.java:252) ~[forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.WorldRenderer.renderEntity(WorldRenderer.java:1219) ~[forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.WorldRenderer.updateCameraAndRender(WorldRenderer.java:1027) ~[forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.GameRenderer.renderWorld(GameRenderer.java:619) ~[forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.GameRenderer.updateCameraAndRender(GameRenderer.java:437) ~[forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1002) ~[forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.run(Minecraft.java:612) ~[forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:184) ~[forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_275] {}
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_275] {}
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_275] {}
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_275] {}
+	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:52) ~[forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-recomp.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.0.6.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.0.6.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-8.0.6.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.0.6.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.0.6.jar:?] {}
+	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:105) [forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-recomp.jar:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at software.bernie.geckolib3.model.AnimatedGeoModel.getModel(AnimatedGeoModel.java:107) ~[geckolib3:3.0.4a] {re:classloading}
+	at software.bernie.geckolib3.renderers.geo.GeoEntityRenderer.render(GeoEntityRenderer.java:121) ~[geckolib3:3.0.4a] {re:classloading}
+	at software.bernie.geckolib3.renderers.geo.GeoEntityRenderer.render(GeoEntityRenderer.java:38) ~[geckolib3:3.0.4a] {re:classloading}
+-- Entity being rendered --
+Details:
+	Entity Type: theancientworld:satyr (com.gonhog.theancientworld.entities.satyr.SatyrEntity)
+	Entity ID: 31
+	Entity Name: entity.theancientworld.satyr
+	Entity's Exact location: -67.33, 4.00, 72.79
+	Entity's Block location: World: (-68,4,72), Chunk: (at 12,0,8 in -5,4; contains blocks -80,0,64 to -65,255,79), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Entity's Momentum: 0.00, -0.06, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+
+-- Renderer details --
+Details:
+	Assigned renderer: com.gonhog.theancientworld.entities.satyr.SatyrRender@5c5c784c
+	Location: 31.49,-2.62,-59.07 - World: (31,-3,-60), Chunk: (at 15,-1,4 in 1,-4; contains blocks 16,0,-64 to 31,255,-49), Region: (0,-1; contains chunks 0,-32 to 31,-1, blocks 0,0,-512 to 511,255,-1)
+	Rotation: 104.0625
+	Delta: 0.8600044
+Stacktrace:
+	at net.minecraft.client.renderer.entity.EntityRendererManager.renderEntityStatic(EntityRendererManager.java:252) ~[forge:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.WorldRenderer.renderEntity(WorldRenderer.java:1219) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.WorldRenderer.updateCameraAndRender(WorldRenderer.java:1027) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.GameRenderer.renderWorld(GameRenderer.java:619) ~[forge:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+
+
+-- Affected level --
+Details:
+	All players: 1 total; [ClientPlayerEntity['Dev'/100, l='ClientLevel', x=-98.81, y=5.00, z=131.86]]
+	Chunk stats: Client Chunk Cache: 841, 460
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (-112,4,96), Chunk: (at 0,0,0 in -7,6; contains blocks -112,0,96 to -97,255,111), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Level time: 33641 game time, 6288 day time
+	Server brand: forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.world.ClientWorld.fillCrashReport(ClientWorld.java:465) ~[forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2086) ~[forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.run(Minecraft.java:628) ~[forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:184) ~[forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_275] {}
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_275] {}
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_275] {}
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_275] {}
+	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:52) ~[forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-recomp.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.0.6.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.0.6.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-8.0.6.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.0.6.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.0.6.jar:?] {}
+	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:105) [forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-recomp.jar:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.4
+	Minecraft Version ID: 1.16.4
+	Operating System: Mac OS X (x86_64) version 10.14.6
+	Java Version: 1.8.0_275, Amazon.com Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Amazon.com Inc.
+	Memory: 1315104472 bytes (1254 MB) / 1919942656 bytes (1831 MB) up to 3817865216 bytes (3641 MB)
+	CPUs: 4
+	JVM Flags: 1 total; -Xss1M
+	ModLauncher: 8.0.6+85+master.325de55
+	ModLauncher launch target: fmluserdevclient
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		/mixin-0.8.2.jar mixin PLUGINSERVICE 
+		/eventbus-3.0.5-service.jar eventbus PLUGINSERVICE 
+		/forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-launcher.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-launcher.jar runtime_enum_extender PLUGINSERVICE 
+		/accesstransformers-2.2.0-shadowed.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-launcher.jar capability_inject_definalize PLUGINSERVICE 
+		/forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-launcher.jar runtimedistcleaner PLUGINSERVICE 
+		/mixin-0.8.2.jar mixin TRANSFORMATIONSERVICE 
+		/forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-launcher.jar fml TRANSFORMATIONSERVICE 
+	FML: 35.1
+	Forge: net.minecraftforge:35.1.4
+	FML Language Providers: 
+		javafml@35.1
+		minecraft@1
+	Mod List: 
+		client-extra.jar                                  |Minecraft                     |minecraft                     |1.16.4              |DONE      |a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		main                                              |The Ancient World             |theancientworld               |1.16.4 -1.0         |DONE      |NOSIGNATURE
+		forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.|Forge                         |forge                         |35.1.4              |DONE      |NOSIGNATURE
+		curios-forge-1.16.4-4.0.3.4_mapped_snapshot_202010|Curios API                    |curios                        |1.16.4-4.0.3.4      |DONE      |NOSIGNATURE
+		forge-1.16.5-geckolib-3.0.4a_mapped_snapshot_20201|GeckoLib                      |geckolib3                     |3.0.4a              |DONE      |NOSIGNATURE
+	Crash Report UUID: ddf84a06-1d06-49af-8d12-80cf91866156
+	Launched Version: MOD_DEV
+	Backend library: LWJGL version 3.2.1 build 12
+	Backend API: Intel(R) UHD Graphics 617 GL version 2.1 INTEL-12.10.22, Intel Inc.
+	GL Caps: Using framebuffer using ARB_framebuffer_object extension
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'forge'
+	Type: Client (map_client.txt)
+	GPU Warnings: version: 2.1
+	Graphics mode: fancy
+	Resource Packs: 
+	Current Language: English (US)
+	CPU: 4x Intel(R) Core(TM) i5-8210Y CPU @ 1.60GHz

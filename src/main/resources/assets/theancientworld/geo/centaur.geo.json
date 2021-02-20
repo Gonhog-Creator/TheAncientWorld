@@ -1,0 +1,91 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.horse",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "body",
+					"pivot": [0, 16, 0],
+					"cubes": [
+						{"origin": [-5, 11, -11], "size": [10, 10, 22], "uv": [0, 32]}
+					]
+				},
+				{
+					"name": "tail",
+					"pivot": [0, 20, 11],
+					"rotation": [30, 0, 0],
+					"cubes": [
+						{"origin": [-1.5, 6, 9], "size": [3, 14, 4], "uv": [42, 36]}
+					]
+				},
+				{
+					"name": "backleftleg",
+					"pivot": [3, 11, 9],
+					"cubes": [
+						{"origin": [1, 0, 7], "size": [4, 11, 4], "uv": [48, 21], "mirror": true}
+					]
+				},
+				{
+					"name": "backrightleg",
+					"pivot": [-3, 11, 9],
+					"cubes": [
+						{"origin": [-5, 0, 7], "size": [4, 11, 4], "uv": [48, 21]}
+					]
+				},
+				{
+					"name": "frontleftleg",
+					"pivot": [3, 11, -9],
+					"cubes": [
+						{"origin": [1, 0, -11], "size": [4, 11, 4], "uv": [48, 21], "mirror": true}
+					]
+				},
+				{
+					"name": "frontrightleg",
+					"pivot": [-3, 11, -9],
+					"cubes": [
+						{"origin": [-5, 0, -11], "size": [4, 11, 4], "uv": [48, 21]}
+					]
+				},
+				{
+					"name": "upperbody",
+					"pivot": [0, 21, -8.5],
+					"cubes": [
+						{"origin": [-5, 21, -11], "size": [10, 9, 5], "uv": [0, 18]}
+					]
+				},
+				{
+					"name": "head",
+					"parent": "upperbody",
+					"pivot": [0, 30, -8.5],
+					"cubes": [
+						{"origin": [-3.5, 30, -12], "size": [7, 7, 7], "uv": [0, 4]}
+					]
+				},
+				{
+					"name": "rightarm",
+					"parent": "upperbody",
+					"pivot": [-5, 29, -8.75],
+					"cubes": [
+						{"origin": [-8, 19, -10], "size": [3, 11, 3], "uv": [34, 16]}
+					]
+				},
+				{
+					"name": "leftarm",
+					"parent": "upperbody",
+					"pivot": [5, 29, -8.5],
+					"cubes": [
+						{"origin": [5, 19, -10], "size": [3, 11, 3], "uv": [4, 36]}
+					]
+				}
+			]
+		}
+	]
+}

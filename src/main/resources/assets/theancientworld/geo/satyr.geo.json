@@ -1,0 +1,97 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.steve",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 5.5,
+				"visible_bounds_offset": [0, 2.25, 0]
+			},
+			"bones": [
+				{
+					"name": "head",
+					"pivot": [0, 25, 0],
+					"cubes": [
+						{"origin": [-4, 24.5, -4], "size": [8, 8, 8], "inflate": -0.5, "uv": [0, 48]}
+					]
+				},
+				{
+					"name": "body",
+					"pivot": [0, 20, 0],
+					"cubes": [
+						{"origin": [-4, 13, -2], "size": [8, 12, 4], "uv": [0, 32]}
+					]
+				},
+				{
+					"name": "rightarm",
+					"pivot": [-5, 23.5, 0],
+					"cubes": [
+						{"origin": [-8, 14, -2], "size": [4, 11, 4], "uv": [48, 34]}
+					]
+				},
+				{
+					"name": "leftarm",
+					"pivot": [5, 23.5, 0],
+					"cubes": [
+						{"origin": [4, 14, -2], "size": [4, 11, 4], "uv": [48, 49]}
+					]
+				},
+				{
+					"name": "rightleg",
+					"pivot": [-2.35, 14.25, -0.75],
+					"rotation": [-50, 0, 0],
+					"cubes": [
+						{"origin": [-4.25, 7.74817, -2.95625], "size": [4, 8, 4], "uv": [0, 18]}
+					]
+				},
+				{
+					"name": "smallerright",
+					"parent": "rightleg",
+					"pivot": [-2.4, 9.33921, -1.18],
+					"rotation": [-90, 0, 0],
+					"cubes": [
+						{"origin": [-3.97, 9.58316, -3.70629], "size": [3, 8, 4], "inflate": -0.01, "uv": [16, 20]}
+					]
+				},
+				{
+					"name": "rightfoot",
+					"parent": "smallerright",
+					"pivot": [-2.6, 17.06124, -0.95938],
+					"rotation": [140, 0, 0],
+					"cubes": [
+						{"origin": [-3.47, 11.69567, -2.11729], "size": [2, 6, 2], "inflate": -0.01, "uv": [30, 25]}
+					]
+				},
+				{
+					"name": "leftleg",
+					"pivot": [2.15, 14.25, -0.75],
+					"rotation": [-50, 0, 0],
+					"cubes": [
+						{"origin": [0.25, 7.74817, -2.95625], "size": [4, 8, 4], "uv": [0, 18]}
+					]
+				},
+				{
+					"name": "smallerleft",
+					"parent": "leftleg",
+					"pivot": [2.4, 9.80118, -0.89313],
+					"rotation": [-90, 0, 0],
+					"cubes": [
+						{"origin": [0.76, 8.75826, -2.95745], "size": [3, 9, 4], "inflate": -0.01, "uv": [16, 20]}
+					]
+				},
+				{
+					"name": "leftfoot",
+					"parent": "smallerleft",
+					"pivot": [2.15, 16.8079, 0.09092],
+					"rotation": [140, 0, 0],
+					"cubes": [
+						{"origin": [1.26, 11.30302, -0.72811], "size": [2, 6, 2], "inflate": -0.01, "uv": [30, 25]}
+					]
+				}
+			]
+		}
+	]
+}

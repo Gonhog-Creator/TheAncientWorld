@@ -1,0 +1,6 @@
+{
+    "parent": "theancientworld:item/vasilis",
+    "textures": {
+        "layer0": "theancientworld:items/vasilis_3"
+    }
+}

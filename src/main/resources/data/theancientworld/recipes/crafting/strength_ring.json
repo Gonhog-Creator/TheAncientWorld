@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "gig",
+    "ipi",
+    "gig"
+  ],
+  "key":
+  {
+    "p":
+    {
+      "item": "theancientworld:potion_ring"
+    },
+    "i":
+    {
+      "item": "minecraft:blaze_powder"
+    },
+    "g":
+    {
+      "item": "theancientworld:glowing_gem"
+    }
+  },
+  "result":
+  {
+    "item": "theancientworld:strength_ring",
+    "count": 1
+  }
+}

@@ -1,0 +1,115 @@
+---- Minecraft Crash Report ----
+// Oops.
+
+Time: 2/12/21 8:48 PM
+Description: Ticking entity
+
+java.lang.NullPointerException: Ticking entity
+	at com.gonhog.theancientworld.entities.TAWGolem.travel(TAWGolem.java:163) ~[?:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.livingTick(LivingEntity.java:2600) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.MobEntity.livingTick(MobEntity.java:538) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.AgeableEntity.livingTick(AgeableEntity.java:139) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.passive.AnimalEntity.livingTick(AnimalEntity.java:55) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.tick(LivingEntity.java:2305) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.MobEntity.tick(MobEntity.java:337) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ServerWorld.updateEntity(ServerWorld.java:623) ~[forge:?] {re:classloading}
+	at net.minecraft.world.World.guardEntityTick(World.java:601) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ServerWorld.tick(ServerWorld.java:407) ~[forge:?] {re:classloading}
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:884) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:820) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:84) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:663) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$startServer$0(MinecraftServer.java:233) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_275] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at com.gonhog.theancientworld.entities.TAWGolem.travel(TAWGolem.java:163) ~[?:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.livingTick(LivingEntity.java:2600) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.MobEntity.livingTick(MobEntity.java:538) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.AgeableEntity.livingTick(AgeableEntity.java:139) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.passive.AnimalEntity.livingTick(AnimalEntity.java:55) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.tick(LivingEntity.java:2305) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.MobEntity.tick(MobEntity.java:337) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ServerWorld.updateEntity(ServerWorld.java:623) ~[forge:?] {re:classloading}
+-- Entity being ticked --
+Details:
+	Entity Type: theancientworld:dirt_golem (com.gonhog.theancientworld.entities.dirt_golem.DirtGolemEntity)
+	Entity ID: 99
+	Entity Name: entity.theancientworld.dirt_golem
+	Entity's Exact location: -105.14, 5.50, 107.80
+	Entity's Block location: World: (-106,5,107), Chunk: (at 6,0,11 in -7,6; contains blocks -112,0,96 to -97,255,111), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Entity's Momentum: 0.00, -0.08, 0.00
+	Entity's Passengers: [ServerPlayerEntity['Dev'/98, l='ServerLevel[Dev]', x=-105.14, y=7.45, z=107.80]]
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at net.minecraft.world.World.guardEntityTick(World.java:601) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ServerWorld.tick(ServerWorld.java:407) ~[forge:?] {re:classloading}
+
+
+-- Affected level --
+Details:
+	All players: 1 total; [ServerPlayerEntity['Dev'/98, l='ServerLevel[Dev]', x=-105.14, y=7.45, z=107.80]]
+	Chunk stats: ServerChunkCache: 2209
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (-112,4,96), Chunk: (at 0,0,0 in -7,6; contains blocks -112,0,96 to -97,255,111), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Level time: 214002 game time, 1444 day time
+	Level name: Dev
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+	Level weather: Rain time: 1 (now: false), thunder time: 1 (now: false)
+	Known server brands: forge
+	Level was modded: true
+	Level storage version: 0x04ABD - Anvil
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:884) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:820) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:84) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:663) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$startServer$0(MinecraftServer.java:233) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_275] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.4
+	Minecraft Version ID: 1.16.4
+	Operating System: Mac OS X (x86_64) version 10.14.6
+	Java Version: 1.8.0_275, Amazon.com Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Amazon.com Inc.
+	Memory: 1127917000 bytes (1075 MB) / 1920991232 bytes (1832 MB) up to 3817865216 bytes (3641 MB)
+	CPUs: 4
+	JVM Flags: 1 total; -Xss1M
+	ModLauncher: 8.0.6+85+master.325de55
+	ModLauncher launch target: fmluserdevclient
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		/mixin-0.8.2.jar mixin PLUGINSERVICE 
+		/eventbus-3.0.5-service.jar eventbus PLUGINSERVICE 
+		/forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-launcher.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-launcher.jar runtime_enum_extender PLUGINSERVICE 
+		/accesstransformers-2.2.0-shadowed.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-launcher.jar capability_inject_definalize PLUGINSERVICE 
+		/forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-launcher.jar runtimedistcleaner PLUGINSERVICE 
+		/mixin-0.8.2.jar mixin TRANSFORMATIONSERVICE 
+		/forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.3-launcher.jar fml TRANSFORMATIONSERVICE 
+	FML: 35.1
+	Forge: net.minecraftforge:35.1.4
+	FML Language Providers: 
+		javafml@35.1
+		minecraft@1
+	Mod List: 
+		client-extra.jar                                  |Minecraft                     |minecraft                     |1.16.4              |DONE      |a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		main                                              |The Ancient World             |theancientworld               |1.16.4 -1.0         |DONE      |NOSIGNATURE
+		forge-1.16.4-35.1.4_mapped_snapshot_20201028-1.16.|Forge                         |forge                         |35.1.4              |DONE      |NOSIGNATURE
+		curios-forge-1.16.4-4.0.3.4_mapped_snapshot_202010|Curios API                    |curios                        |1.16.4-4.0.3.4      |DONE      |NOSIGNATURE
+		forge-1.16.5-geckolib-3.0.4a_mapped_snapshot_20201|GeckoLib                      |geckolib3                     |3.0.4a              |DONE      |NOSIGNATURE
+	Crash Report UUID: 5ff0d0a1-4000-4ac2-bac8-dcf33742c285
+	Player Count: 1 / 8; [ServerPlayerEntity['Dev'/98, l='ServerLevel[Dev]', x=-105.14, y=7.45, z=107.80]]
+	Data Packs: vanilla, mod:theancientworld, mod:forge, mod:curios, mod:geckolib3 (incompatible)
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'forge'

@@ -2,6 +2,7 @@ package com.gonhog.theancientworld.tools;
 
 import com.gonhog.theancientworld.util.RegistryHandler;
 import net.minecraft.item.IItemTier;
+import net.minecraft.item.Rarity;
 import net.minecraft.item.crafting.Ingredient;
 
 import java.util.function.Supplier;
@@ -9,7 +10,10 @@ import java.util.function.Supplier;
 public enum BasicModItemTier implements IItemTier {
 
     //harvest level, max uses, attack speed, base attack damage, enchantability, repair material
-    ADAMANT(4, 2000, 10.0f, 1.0f, 30, () -> {return Ingredient.fromItems(RegistryHandler.ADAMANT_PLATE.get());});
+    ADAMANT(4, 2000, 10.0f, 1.0f, 30, () -> {return Ingredient.fromItems(RegistryHandler.ADAMANT_PLATE.get());}),
+    VASILIS(4, 1500, 15.0f, 1.0f, 30, () -> {return Ingredient.fromItems(RegistryHandler.DRAGONBONE.get());}),
+    LEIBANA(4, 1500, 10.0f, 1.0f, 30, () -> {return Ingredient.fromItems(RegistryHandler.ADAMANT_PLATE.get());});
+
 
     private final int harvestLevel;
     private final int maxUses;

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "theancientworld:glowing_ingot"
+    }
+  ],
+  "result":
+  {
+    "item": "theancientworld:glowing_powder",
+    "count": 4
+  }
+}

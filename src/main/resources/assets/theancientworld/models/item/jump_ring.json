@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "theancientworld:items/jump_ring_gem",
+    "layer1": "theancientworld:items/ring"
+  }
+}

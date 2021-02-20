@@ -1,51 +1,59 @@
 package com.gonhog.theancientworld.events;
 
+import com.gonhog.theancientworld.tools.BowOfArrows;
 import com.gonhog.theancientworld.util.RegistryHandler;
-import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.inventory.IInventory;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.Hand;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.RenderPlayerEvent;
-import net.minecraftforge.event.entity.living.LivingSetAttackTargetEvent;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.event.ServerChatEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import org.apache.commons.lang3.tuple.ImmutableTriple;
+import top.theillusivec4.curios.api.CuriosApi;
+import top.theillusivec4.curios.api.CuriosCapability;
+
+import java.util.Optional;
+import java.util.function.Predicate;
 
 
 @Mod.EventBusSubscriber(modid = "theancientworld", bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
 public class ClientEventHandler {
 
-    @SubscribeEvent
-    public static void renderPlayerEventGlove(RenderPlayerEvent.Pre event) {
-        Item glove = RegistryHandler.INVISIBILITY_GLOVE.get();
-        Item offhand = event.getPlayer().getHeldItemOffhand().getItem();
-        final boolean posX = event.getPlayer().getPosX() == event.getPlayer().lastTickPosX;
-        final boolean posY = event.getPlayer().getPosY() == event.getPlayer().lastTickPosY;
-        final boolean posZ = event.getPlayer().getPosZ() == event.getPlayer().lastTickPosZ;
-        final boolean notMoving = posX && posY && posZ;
-        event.setCanceled(glove == offhand && notMoving);
+    public static ItemStack getEquippedCurios(Predicate<ItemStack> predicate, PlayerEntity player) {
+        Optional<ItemStack> stack = CuriosApi.getCuriosHelper().findEquippedCurio(predicate, player).map(ImmutableTriple::getRight);
+        return stack.orElse(ItemStack.EMPTY);
     }
 
     @SubscribeEvent
-    public static void makePlayerUntargetable(LivingSetAttackTargetEvent event) {
-
-        if (event.getTarget() instanceof PlayerEntity) {
-            Item glove = RegistryHandler.INVISIBILITY_GLOVE.get();
-            Item offhand = event.getTarget().getHeldItemOffhand().getItem();
-            final boolean posX = event.getTarget().getPosX() == event.getTarget().lastTickPosX;
-            final boolean posY = event.getTarget().getPosY() == event.getTarget().lastTickPosY;
-            final boolean posZ = event.getTarget().getPosZ() == event.getTarget().lastTickPosZ;
-            final boolean notMoving = posX && posY && posZ;
-            MobEntity mob = (MobEntity) event.getEntityLiving();
-            if (offhand == glove && notMoving) {
-                mob.setAttackTarget(null);
-            } else {
-                mob.setAttackTarget(event.getTarget());
-            } if (offhand == glove && !notMoving) {
-                mob.setAttackTarget(event.getTarget());
+    public static void BowOfArrowsChat(ServerChatEvent event) {
+        PlayerEntity playerEntity = event.getPlayer();
+        Hand hand = playerEntity.getActiveHand();
+        ItemStack tool = playerEntity.getHeldItem(hand);
+        Item mainHand = playerEntity.getHeldItemMainhand().getItem();
+        Item offHand = playerEntity.getHeldItemOffhand().getItem();
+        Item bow = RegistryHandler.BOW_OF_ARROWS.get();
+        String message = event.getMessage();
+        boolean numeric = true;
+        try {
+            Double num = Double.parseDouble(message);
+        } catch (NumberFormatException e) {
+            numeric = false;
+        }
+        if (numeric) {
+            int messageInt = Integer.parseInt(message);
+            if (messageInt > 0 && messageInt <= 300) {
+                if (mainHand == bow) {
+                    System.out.println("Message recived! You're holding the bow!");
+                    BowOfArrows.setArrows(messageInt);
+                }
             }
-
         }
     }
+
 }
 
 

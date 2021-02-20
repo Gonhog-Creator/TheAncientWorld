@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "facing=north": { "model": "theancientworld:block/test_block" },
+    "facing=south": { "model": "theancientworld:block/test_block", "y": 180 },
+    "facing=west": { "model": "theancientworld:block/test_block", "y": 270 },
+    "facing=east": { "model": "theancientworld:block/test_block", "y": 90 },
+    "facing=up": { "model": "theancientworld:block/test_block", "x": -90 },
+    "facing=down": { "model": "theancientworld:block/test_block", "x": 90 }
+  }
+}

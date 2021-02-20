@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "theancientworld:raw_satyr_meat"
+  },
+  "result": "theancientworld:cooked_satyr_meat",
+  "experience": 1.0,
+  "cookingtime": 150
+}

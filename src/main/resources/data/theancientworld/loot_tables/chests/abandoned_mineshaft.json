@@ -1,0 +1,100 @@
+{
+  "pools": [
+    {
+      "name": "main",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 8,
+          "name": "theancientworld:strength_ring"
+        },
+        {
+          "type": "item",
+          "weight": 8,
+          "name": "theancientworld:resistance_ring"
+        },
+        {
+          "type": "item",
+          "weight": 8,
+          "name": "theancientworld:jump_ring"
+        },
+        {
+          "type": "item",
+          "weight": 16,
+          "name": "theancientworld:potion_ring"
+        },
+        {
+          "type": "item",
+          "weight": 8,
+          "name": "theancientworld:haste_ring"
+        },
+        {
+          "type": "item",
+          "weight": 8,
+          "name": "theancientworld:enchanted_eyes_ring"
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "glowing_ingredients",
+      "rolls": {
+        "min": 2.0,
+        "max": 6.0,
+        "type": "minecraft:uniform"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1.0,
+                "max": 3.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "theancientworld:glowing_powder"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1.0,
+                "max": 2.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "theancientworld:glowing_ingot"
+        },
+
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 0.0,
+                "max": 1.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "theancientworld:adamant_plate"
+        }
+      ]
+    }
+  ]
+}

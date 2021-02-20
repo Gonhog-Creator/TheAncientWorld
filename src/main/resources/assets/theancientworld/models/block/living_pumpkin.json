@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "minecraft:block/pumpkin_side",
+    "down": "minecraft:block/pumpkin_side",
+    "up": "minecraft:block/pumpkin_side",
+    "east": "minecraft:block/pumpkin_side",
+    "west": "minecraft:block/pumpkin_side",
+    "north": "theancientworld:blocks/living_pumpkin",
+    "south": "minecraft:block/pumpkin_side"
+  }
+}

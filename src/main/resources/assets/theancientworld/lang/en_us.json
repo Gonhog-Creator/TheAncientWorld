@@ -7,6 +7,20 @@
   "item.theancientworld.raw_satyr_meat": "Satyr Meat",
   "item.theancientworld.cooked_satyr_meat": "Cooked Satyr Meat",
   "item.theancientworld.invisibility_glove": "Glove of Invisibility",
+  "item.theancientworld.glowing_ingot": "Glowing Ingot",
+  "item.theancientworld.glowing_powder": "Glowing Powder",
+  "item.theancientworld.glowing_gem": "Glowing Gem",
+  "item.theancientworld.enchanted_eyes_ring": "Ring of Enchanted Eyes",
+  "item.theancientworld.resistance_ring": "Potion Ring of Resistance",
+  "item.theancientworld.regen_ring": "Potion Ring of Regen",
+  "item.theancientworld.haste_ring": "Potion Ring of Haste",
+  "item.theancientworld.speed_ring": "Potion Ring of Speed",
+  "item.theancientworld.jump_ring": "Potion Ring of Jump Boost",
+  "item.theancientworld.strength_ring": "Potion Ring of Strength",
+  "item.theancientworld.potion_ring": "Potion Ring",
+  "item.theancientworld.dragon_eye": "Dragon's Eye",
+
+
 
   "item.theancientworld.adamant_sword": "Adamant Sword",
   "item.theancientworld.adamant_axe": "Adamant Axe",
@@ -18,7 +32,20 @@
   "item.theancientworld.adamant_leggings": "Adamant Leggings",
   "item.theancientworld.adamant_boots": "Adamant Boots",
 
-  "block.theancientworld.adamant_block": "Adamant Block",
+  "item.theancientworld.bow_of_arrows": "Bow of Arrows",
+  "item.theancientworld.vasilis" : "Vasilis",
+  "item.theancientworld.leibana": "Leibana",
 
-  "itemGroup.theancientworld_TAB": "The Ancient World"
+  "block.theancientworld.adamant_block": "Adamant Block",
+  "block.theancientworld.test_block" : "Test Block",
+  "block.theancientworld.living_pumpkin" : "Living Pumpkin",
+
+  "message.test_block": "This is the test block.",
+  "message.invisibilityglove": "A single glove.",
+  "message.vasilis": "Legendary Sword of Light and Darkness",
+  "message.leibana": "Legendary Sword of Speed",
+
+  "screen.test_block": "Test Block Screen",
+
+  "itemGroup.theancientworld_Tab": "The Ancient World"
 }
