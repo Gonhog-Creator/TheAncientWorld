@@ -1,0 +1,28 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"wraith_animation": {
+			"loop": true
+		},
+		"walking": {
+			"loop": true,
+			"bones": {
+				"leftarm": {
+					"rotation": {
+						"vector": [5, 0, -7.5]
+					}
+				},
+				"rightarm": {
+					"rotation": {
+						"vector": [5, 0, 7.5]
+					}
+				},
+				"body": {
+					"rotation": {
+						"vector": [5, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

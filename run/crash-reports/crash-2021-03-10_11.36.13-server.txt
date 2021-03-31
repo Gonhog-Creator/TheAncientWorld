@@ -1,0 +1,100 @@
+---- Minecraft Crash Report ----
+// On the bright side, I bought you a teddy bear!
+
+Time: 3/10/21 11:36 AM
+Description: Exception ticking world
+
+java.lang.UnsupportedOperationException: Attempted to call Event#setCanceled() on a non-cancelable event of type: net.minecraftforge.event.entity.living.LivingSpawnEvent.AllowDespawn
+	at net.minecraftforge.eventbus.api.Event.setCanceled(Event.java:95) ~[eventbus-4.0.0.jar:?] {}
+	at com.gonhog.theancientworld.util.StructureHelpers.canCustomMobSpawn(StructureHelpers.java:134) ~[main/:?] {re:classloading}
+	at net.minecraftforge.eventbus.EventBus.doCastFilter(EventBus.java:247) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.lambda$addListener$11(EventBus.java:239) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:302) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:283) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.event.ForgeEventFactory.canEntityDespawn(ForgeEventFactory.java:217) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.MobEntity.checkDespawn(MobEntity.java:700) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ServerWorld.tick(ServerWorld.java:391) ~[forge:?] {re:classloading}
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:885) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:821) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:84) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:664) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$startServer$0(MinecraftServer.java:233) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_275] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at net.minecraftforge.eventbus.api.Event.setCanceled(Event.java:95) ~[eventbus-4.0.0.jar:?] {}
+	at com.gonhog.theancientworld.util.StructureHelpers.canCustomMobSpawn(StructureHelpers.java:134) ~[main/:?] {re:classloading}
+	at net.minecraftforge.eventbus.EventBus.doCastFilter(EventBus.java:247) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.lambda$addListener$11(EventBus.java:239) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:302) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:283) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.event.ForgeEventFactory.canEntityDespawn(ForgeEventFactory.java:217) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.MobEntity.checkDespawn(MobEntity.java:700) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ServerWorld.tick(ServerWorld.java:391) ~[forge:?] {re:classloading}
+-- Affected level --
+Details:
+	All players: 0 total; []
+	Chunk stats: ServerChunkCache: 2025
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (32,72,128), Chunk: (at 0,4,0 in 2,8; contains blocks 32,0,128 to 47,255,143), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 1657 game time, 1657 day time
+	Level name: New World
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+	Level weather: Rain time: 155082 (now: false), thunder time: 100173 (now: false)
+	Known server brands: forge
+	Level was modded: true
+	Level storage version: 0x04ABD - Anvil
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:885) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:821) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:84) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:664) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$startServer$0(MinecraftServer.java:233) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_275] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.5
+	Minecraft Version ID: 1.16.5
+	Operating System: Mac OS X (x86_64) version 10.14.6
+	Java Version: 1.8.0_275, Amazon.com Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Amazon.com Inc.
+	Memory: 955829728 bytes (911 MB) / 1843396608 bytes (1758 MB) up to 3817865216 bytes (3641 MB)
+	CPUs: 4
+	JVM Flags: 1 total; -Xss1M
+	ModLauncher: 8.0.9+86+master.3cf110c
+	ModLauncher launch target: fmluserdevclient
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		/mixin-0.8.2.jar mixin PLUGINSERVICE 
+		/eventbus-4.0.0.jar eventbus PLUGINSERVICE 
+		/forge-1.16.5-36.0.22_mapped_snapshot_20201028-1.16.3-launcher.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.5-36.0.22_mapped_snapshot_20201028-1.16.3-launcher.jar runtime_enum_extender PLUGINSERVICE 
+		/forge-1.16.5-36.0.22_mapped_snapshot_20201028-1.16.3-launcher.jar capability_inject_definalize PLUGINSERVICE 
+		/accesstransformers-3.0.1.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.5-36.0.22_mapped_snapshot_20201028-1.16.3-launcher.jar runtimedistcleaner PLUGINSERVICE 
+		/mixin-0.8.2.jar mixin TRANSFORMATIONSERVICE 
+		/forge-1.16.5-36.0.22_mapped_snapshot_20201028-1.16.3-launcher.jar fml TRANSFORMATIONSERVICE 
+	FML: 36.0
+	Forge: net.minecraftforge:36.0.22
+	FML Language Providers: 
+		javafml@36.0
+		minecraft@1
+	Mod List: 
+		client-extra.jar                                  |Minecraft                     |minecraft                     |1.16.5              |DONE      |a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		main                                              |The Ancient World             |theancientworld               |1.16.5 - 1.0        |DONE      |NOSIGNATURE
+		forge-1.16.5-36.0.22_mapped_snapshot_20201028-1.16|Forge                         |forge                         |36.0.22             |DONE      |NOSIGNATURE
+		curios-forge-1.16.3-4.0.2.0_mapped_snapshot_202010|Curios API                    |curios                        |1.16.3-4.0.2.0      |DONE      |NOSIGNATURE
+		forge-1.16.5-geckolib-3.0.6_mapped_snapshot_202010|GeckoLib                      |geckolib3                     |3.0.6               |DONE      |NOSIGNATURE
+	Crash Report UUID: 81ade9d2-1000-4d01-a987-68928b2f807c
+	Player Count: 0 / 8; []
+	Data Packs: vanilla, mod:theancientworld, mod:forge, mod:curios, mod:geckolib3 (incompatible)
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'forge'

@@ -19,9 +19,11 @@
   "item.theancientworld.strength_ring": "Potion Ring of Strength",
   "item.theancientworld.potion_ring": "Potion Ring",
   "item.theancientworld.dragon_eye": "Dragon's Eye",
-
-
-
+  "item.theancientworld.astrid_feather": "Astrid Feather",
+  "item.theancientworld.phoenix_feather": "Phoenix Feather",
+  "item.theancientworld.tauran_leather": "Tauran Leather",
+  "item.theancientworld.unicorn_horn": "Unicorn Horn",
+  "item.theancientworld.tauran_hoof": "Tauran Hoof",
   "item.theancientworld.adamant_sword": "Adamant Sword",
   "item.theancientworld.adamant_axe": "Adamant Axe",
   "item.theancientworld.adamant_hoe": "Adamant Hoe",
@@ -31,11 +33,19 @@
   "item.theancientworld.adamant_chestplate": "Adamant Chestplate",
   "item.theancientworld.adamant_leggings": "Adamant Leggings",
   "item.theancientworld.adamant_boots": "Adamant Boots",
-
-  "item.theancientworld.bow_of_arrows": "Bow of Arrows",
+  "item.theancientworld.tauran_helm": "Tauran Helm",
+  "item.theancientworld.tauran_chestplate": "Tauran Chestplate",
+  "item.theancientworld.tauran_leggings": "Tauran Leggings",
+  "item.theancientworld.tauran_boots": "Tauran Boots",
+  "item.theancientworld.raw_centaur_meat": "Raw Centaur Meat",
+  "item.theancientworld.cooked_centaur_meat": "Cooked Centaur Meat",
+  "item.theancientworld.unicorn_meat": "Unicorn Flesh",
+  "item.theancientworld.raw_venison": "Raw Venison",
+  "item.theancientworld.cooked_venison": "Cooked Venison",
+  "item.theancientworld.deer_antler": "Deer Antler",
+  "item.theancientworld.bow_of_plenty": "Bow of Plenty",
   "item.theancientworld.vasilis" : "Vasilis",
   "item.theancientworld.leibana": "Leibana",
-
   "block.theancientworld.adamant_block": "Adamant Block",
   "block.theancientworld.test_block" : "Test Block",
   "block.theancientworld.living_pumpkin" : "Living Pumpkin",

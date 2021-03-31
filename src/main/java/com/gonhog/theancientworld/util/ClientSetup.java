@@ -2,13 +2,16 @@ package com.gonhog.theancientworld.util;
 
 
 import com.gonhog.theancientworld.TheAncientWorld;
+import com.gonhog.theancientworld.entities.astrid.AstridRender;
 import com.gonhog.theancientworld.entities.centaur.CentaurRender;
+import com.gonhog.theancientworld.entities.deer.DeerRender;
 import com.gonhog.theancientworld.entities.dirt_golem.DirtGolemRender;
 import com.gonhog.theancientworld.entities.nipsie.NipsieRender;
 import com.gonhog.theancientworld.entities.quick_hit_arrow.QuickHitArrowRender;
 import com.gonhog.theancientworld.entities.satyr.SatyrRender;
 import com.gonhog.theancientworld.entities.unicorn.UnicornRender;
 import com.gonhog.theancientworld.entities.wood_golem.WoodGolemRender;
+import com.gonhog.theancientworld.entities.wraith.WraithRender;
 import com.gonhog.theancientworld.screens.TestBlockScreen;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraftforge.api.distmarker.Dist;
@@ -30,8 +33,9 @@ public class ClientSetup {
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.NIPSIE.get(), NipsieRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.DIRT_GOLEM.get(), DirtGolemRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.WOOD_GOLEM.get(), WoodGolemRender::new);
-
-
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.ASTRID.get(), AstridRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.DEER.get(), DeerRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.WRAITH.get(), WraithRender::new);
     }
 }
 

@@ -2,8 +2,10 @@ package com.gonhog.theancientworld.entities.satyr;
 
 import com.gonhog.theancientworld.TheAncientWorld;
 import com.gonhog.theancientworld.util.RegistryHandler;
+import net.minecraft.block.BlockState;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.MobEntity;
+import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.*;
@@ -14,7 +16,13 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.SectionPos;
+import net.minecraft.world.IServerWorld;
 import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import org.apache.logging.log4j.core.jmx.Server;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
 import software.bernie.geckolib3.core.builder.AnimationBuilder;
@@ -22,6 +30,8 @@ import software.bernie.geckolib3.core.controller.AnimationController;
 import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
+
+import java.util.Random;
 
 
 public class SatyrEntity extends CowEntity implements IAnimatable {
@@ -77,6 +87,22 @@ public class SatyrEntity extends CowEntity implements IAnimatable {
     public void registerControllers(AnimationData data)
     {
         data.addAnimationController(new AnimationController(this, "controller", 0, this::predicate));
+    }
+
+    public static boolean canSpawnAt(EntityType<SatyrEntity> entityType, IServerWorld world, SpawnReason reason, BlockPos pos, Random random) {
+        if(canSpawnOn(entityType, world,reason,pos,random)) {
+            BlockState blockState = world.getBlockState(pos);
+            ServerWorld serverWorld = world.getWorld();
+            BlockPos blockpos = pos.down();
+
+            return world.getBlockState(blockpos).isIn(RegistryHandler.SATYR_AIR.get());
+
+            //if (serverWorld.func_241827_a(SectionPos.from(pos), RegistryHandler.FABLEHAVEN.get()).findAny().isPresent()) {
+            //return blockState.isIn(RegistryHandler.ADAMANT_BLOCK.get());
+            //}
+        }
+        return world.getBlockState(pos.down()).isIn(RegistryHandler.SATYR_AIR.get());
+        //return false;
     }
 }
 

@@ -1,0 +1,129 @@
+---- Minecraft Crash Report ----
+// This is a token for 1 free hug. Redeem at your nearest Mojangsta: [~~HUG~~]
+
+Time: 2/22/21 8:18 PM
+Description: Ticking entity
+
+java.lang.IllegalArgumentException: Can't find attribute minecraft:generic.flying_speed
+	at net.minecraft.entity.ai.attributes.AttributeModifierMap.getModifier(AttributeModifierMap.java:21) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.ai.attributes.AttributeModifierMap.getAttributeValue(AttributeModifierMap.java:28) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.ai.attributes.AttributeModifierManager.getAttributeValue(AttributeModifierManager.java:67) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.getAttributeValue(LivingEntity.java:1849) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.ai.controller.FlyingMovementController.tick(FlyingMovementController.java:37) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.MobEntity.updateEntityActionState(MobEntity.java:749) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.LivingEntity.livingTick(LivingEntity.java:2562) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.MobEntity.livingTick(MobEntity.java:538) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.AgeableEntity.livingTick(AgeableEntity.java:139) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.passive.AnimalEntity.livingTick(AnimalEntity.java:55) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.passive.ParrotEntity.livingTick(ParrotEntity.java:187) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.tick(LivingEntity.java:2305) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.MobEntity.tick(MobEntity.java:337) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.passive.ShoulderRidingEntity.tick(ShoulderRidingEntity.java:32) ~[forge:?] {re:classloading}
+	at net.minecraft.world.server.ServerWorld.updateEntity(ServerWorld.java:623) ~[forge:?] {re:classloading}
+	at net.minecraft.world.World.guardEntityTick(World.java:601) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ServerWorld.tick(ServerWorld.java:407) ~[forge:?] {re:classloading}
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:885) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:821) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:84) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:664) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$startServer$0(MinecraftServer.java:233) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_275] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at net.minecraft.entity.ai.attributes.AttributeModifierMap.getModifier(AttributeModifierMap.java:21) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.ai.attributes.AttributeModifierMap.getAttributeValue(AttributeModifierMap.java:28) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.ai.attributes.AttributeModifierManager.getAttributeValue(AttributeModifierManager.java:67) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.getAttributeValue(LivingEntity.java:1849) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.ai.controller.FlyingMovementController.tick(FlyingMovementController.java:37) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.MobEntity.updateEntityActionState(MobEntity.java:749) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.LivingEntity.livingTick(LivingEntity.java:2562) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.MobEntity.livingTick(MobEntity.java:538) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.AgeableEntity.livingTick(AgeableEntity.java:139) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.passive.AnimalEntity.livingTick(AnimalEntity.java:55) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.passive.ParrotEntity.livingTick(ParrotEntity.java:187) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.tick(LivingEntity.java:2305) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.MobEntity.tick(MobEntity.java:337) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.passive.ShoulderRidingEntity.tick(ShoulderRidingEntity.java:32) ~[forge:?] {re:classloading}
+	at net.minecraft.world.server.ServerWorld.updateEntity(ServerWorld.java:623) ~[forge:?] {re:classloading}
+-- Entity being ticked --
+Details:
+	Entity Type: theancientworld:astrid (com.gonhog.theancientworld.entities.astrid.AstridEntity)
+	Entity ID: 33
+	Entity Name: entity.theancientworld.astrid
+	Entity's Exact location: -108.67, 4.64, 107.43
+	Entity's Block location: World: (-109,4,107), Chunk: (at 3,0,11 in -7,6; contains blocks -112,0,96 to -97,255,111), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Entity's Momentum: 0.09, 0.19, 0.18
+	Entity's Passengers: []
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at net.minecraft.world.World.guardEntityTick(World.java:601) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ServerWorld.tick(ServerWorld.java:407) ~[forge:?] {re:classloading}
+
+
+-- Affected level --
+Details:
+	All players: 1 total; [ServerPlayerEntity['Dev'/106, l='ServerLevel[Dev]', x=-109.98, y=4.00, z=104.89]]
+	Chunk stats: ServerChunkCache: 2204
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (-112,4,96), Chunk: (at 0,0,0 in -7,6; contains blocks -112,0,96 to -97,255,111), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Level time: 294144 game time, 31938 day time
+	Level name: Dev
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+	Level weather: Rain time: 1 (now: false), thunder time: 1 (now: false)
+	Known server brands: forge
+	Level was modded: true
+	Level storage version: 0x04ABD - Anvil
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:885) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:821) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:84) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:664) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$startServer$0(MinecraftServer.java:233) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_275] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.5
+	Minecraft Version ID: 1.16.5
+	Operating System: Mac OS X (x86_64) version 10.14.6
+	Java Version: 1.8.0_275, Amazon.com Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Amazon.com Inc.
+	Memory: 952155728 bytes (908 MB) / 1819279360 bytes (1735 MB) up to 3817865216 bytes (3641 MB)
+	CPUs: 4
+	JVM Flags: 1 total; -Xss1M
+	ModLauncher: 8.0.9+86+master.3cf110c
+	ModLauncher launch target: fmluserdevclient
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		/mixin-0.8.2.jar mixin PLUGINSERVICE 
+		/eventbus-4.0.0.jar eventbus PLUGINSERVICE 
+		/forge-1.16.5-36.0.22_mapped_snapshot_20201028-1.16.3-launcher.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.5-36.0.22_mapped_snapshot_20201028-1.16.3-launcher.jar runtime_enum_extender PLUGINSERVICE 
+		/accesstransformers-3.0.1.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.5-36.0.22_mapped_snapshot_20201028-1.16.3-launcher.jar capability_inject_definalize PLUGINSERVICE 
+		/forge-1.16.5-36.0.22_mapped_snapshot_20201028-1.16.3-launcher.jar runtimedistcleaner PLUGINSERVICE 
+		/mixin-0.8.2.jar mixin TRANSFORMATIONSERVICE 
+		/forge-1.16.5-36.0.22_mapped_snapshot_20201028-1.16.3-launcher.jar fml TRANSFORMATIONSERVICE 
+	FML: 36.0
+	Forge: net.minecraftforge:36.0.22
+	FML Language Providers: 
+		javafml@36.0
+		minecraft@1
+	Mod List: 
+		client-extra.jar                                  |Minecraft                     |minecraft                     |1.16.5              |DONE      |a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		main                                              |The Ancient World             |theancientworld               |1.16.5 - 1.0        |DONE      |NOSIGNATURE
+		forge-1.16.5-36.0.22_mapped_snapshot_20201028-1.16|Forge                         |forge                         |36.0.22             |DONE      |NOSIGNATURE
+		curios-forge-1.16.3-4.0.2.0_mapped_snapshot_202010|Curios API                    |curios                        |1.16.3-4.0.2.0      |DONE      |NOSIGNATURE
+		forge-1.16.5-geckolib-3.0.6_mapped_snapshot_202010|GeckoLib                      |geckolib3                     |3.0.6               |DONE      |NOSIGNATURE
+	Crash Report UUID: f4527a39-25ee-4310-9ecc-463f9ae85824
+	Player Count: 1 / 8; [ServerPlayerEntity['Dev'/106, l='ServerLevel[Dev]', x=-109.98, y=4.00, z=104.89]]
+	Data Packs: vanilla, mod:theancientworld, mod:forge, mod:curios, mod:geckolib3 (incompatible)
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'forge'

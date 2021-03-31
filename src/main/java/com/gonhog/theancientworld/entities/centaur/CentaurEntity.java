@@ -221,10 +221,6 @@ public class CentaurEntity extends AbstractHorseEntity implements IAnimatable {
         return super.onInitialSpawn(worldIn, difficultyIn, reason, spawnDataIn, dataTag);
     }
 
-    private void func_234238_i_(CoatColors p_234238_1_, CoatTypes p_234238_2_) {
-        this.func_234242_w_(p_234238_1_.getId() & 255 | p_234238_2_.getId() << 8 & '\uff00');
-    }
-
     public static class CentaurData extends AgeableEntity.AgeableData {
         public final CoatColors variant;
 

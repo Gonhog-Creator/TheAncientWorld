@@ -6,6 +6,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.AbstractArrowEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.network.IPacket;
 import net.minecraft.util.IItemProvider;
 import net.minecraft.world.World;
@@ -29,7 +30,7 @@ public class QuickHitArrowEntity extends AbstractArrowEntity {
 
     @Override
     protected ItemStack getArrowStack() {
-        return new ItemStack((IItemProvider) RegistryHandler.QUICK_HIT_ARROW.get());
+        return new ItemStack(Items.ARROW);
     }
 
     @Override

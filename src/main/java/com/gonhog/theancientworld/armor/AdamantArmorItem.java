@@ -13,7 +13,7 @@ import net.minecraft.world.World;
 
 public class AdamantArmorItem extends ArmorItem{
     public AdamantArmorItem(EquipmentSlotType slot) {
-        super(ModArmorBase.ADAMANT, slot, new Item.Properties().group(TheAncientWorld.TAB));
+        super(ModArmorBase.ADAMANT, slot, new Item.Properties().group(TheAncientWorld.TAB).maxStackSize(1));
     }
 
     @Override
@@ -24,7 +24,8 @@ public class AdamantArmorItem extends ArmorItem{
         ItemStack chest = player.getItemStackFromSlot(EquipmentSlotType.CHEST);
         ItemStack helm = player.getItemStackFromSlot(EquipmentSlotType.HEAD);
 
-        final boolean wearingAllAdamantArmor = boots.getItem() == RegistryHandler.ADAMANT_BOOTS.get() &&
+        final boolean wearingAllAdamantArmor =
+                boots.getItem() == RegistryHandler.ADAMANT_BOOTS.get() &&
                 legs.getItem() == RegistryHandler.ADAMANT_LEGGINGS.get() &&
                 chest.getItem() == RegistryHandler.ADAMANT_CHESTPLATE.get() &&
                 helm.getItem() == RegistryHandler.ADAMANT_HELM.get();

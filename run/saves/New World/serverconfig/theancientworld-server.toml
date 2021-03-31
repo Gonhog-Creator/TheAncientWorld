@@ -4,6 +4,9 @@
 
 	#TestBlock settings
 	[power.test_block]
+		#Ticks per plate
+		#Range: > 0
+		ticks = 20
 		#Maximum power for the Test Block generator
 		#Range: > 0
 		maxPower = 100000
@@ -13,7 +16,4 @@
 		#Power generation to send per tick
 		#Range: > 0
 		send = 100
-		#Ticks per plate
-		#Range: > 0
-		ticks = 20
 

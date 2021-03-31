@@ -1,0 +1,6 @@
+{
+    "parent": "theancientworld:item/bow_of_plenty",
+    "textures": {
+        "layer0": "theancientworld:items/bow_of_plenty_pulling_2"
+    }
+}

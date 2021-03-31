@@ -4,19 +4,23 @@ import com.gonhog.theancientworld.TheAncientWorld;
 import com.gonhog.theancientworld.util.RegistryHandler;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
+import net.minecraft.item.Item;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.fml.RegistryObject;
+
 import java.util.function.Supplier;
 
 public enum ModArmorBase implements IArmorMaterial {
 
 
+    TAURAN(TheAncientWorld.MOD_ID + ":tauran", 18, new int[]{2, 5, 6, 3}, 12, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER,
+            1.0f, 0.0F, () -> {return Ingredient.fromItems(RegistryHandler.TAURAN_LEATHER.get() /*, RegistryHandler.ADAMANT_PLATE.get()*/ );  }),
     ADAMANT(TheAncientWorld.MOD_ID + ":adamant",  37, new int[]{6, 12, 16, 6}, 25, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE,
-            3.0F, 0.1F, () -> {return Ingredient.fromItems(RegistryHandler.ADAMANT_PLATE.get());
-    });
+            3.0F, 0.1F, () -> {return Ingredient.fromItems(RegistryHandler.ADAMANT_PLATE.get()); });
 
 
 
@@ -83,5 +87,4 @@ public enum ModArmorBase implements IArmorMaterial {
     public float getKnockbackResistance() {
         return this.knockbackResistance;
     }
-
 }

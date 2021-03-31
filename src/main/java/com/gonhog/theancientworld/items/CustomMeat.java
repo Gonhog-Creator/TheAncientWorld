@@ -11,12 +11,9 @@ public class CustomMeat extends Item {
         super(new Item.Properties()
                 .group(TheAncientWorld.TAB)
                 .food(new Food.Builder()
-                        .hunger(6)
+                        .hunger(4)
                         .meat()
-                        .saturation(6)
-                        //.effect(new EffectInstance(Effects.FIRE_RESISTANCE, 100, 1),1.0f)
-                        //.effect(new EffectInstance(Effects.ABSORPTION, 100, 4),1.0f)
-                        //.effect(new EffectInstance(Effects.REGENERATION, 100, 4),1.0f)
+                        .saturation(4)
                         .build())
         );
     }

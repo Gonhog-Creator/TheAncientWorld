@@ -97,15 +97,6 @@ public class UnicornEntity extends AbstractHorseEntity implements IAnimatable {
 
     }
 
-    public ItemStack func_213803_dV() {
-        return this.getItemStackFromSlot(EquipmentSlotType.CHEST);
-    }
-
-    private void func_213805_k(ItemStack p_213805_1_) {
-        this.setItemStackToSlot(EquipmentSlotType.CHEST, p_213805_1_);
-        this.setDropChance(EquipmentSlotType.CHEST, 0.0F);
-    }
-
     private int func_234241_eS_() {
         return this.dataManager.get(UNICORN);
     }
