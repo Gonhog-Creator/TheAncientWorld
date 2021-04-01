@@ -77,7 +77,7 @@ public class StructureHelpers {
         // You can even use the BiomeDictionary as well! To use BiomeDictionary, do
         // RegistryKey.getOrCreateKey(Registry.BIOME_KEY, event.getName()) to get the biome's
         // registrykey. Then that can be fed into the dictionary to get the biome's types.
-        event.getGeneration().getStructures().add(() -> TAWConfiguredStructures.CONFIGURED_FABLEHAVEN);
+        //event.getGeneration().getStructures().add(() -> TAWConfiguredStructures.CONFIGURED_FABLEHAVEN);
 
     }
 
