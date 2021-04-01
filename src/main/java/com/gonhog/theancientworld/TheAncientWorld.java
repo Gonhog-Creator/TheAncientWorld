@@ -94,6 +94,7 @@ public class TheAncientWorld
         // The comments for BiomeLoadingEvent and StructureSpawnListGatherEvent says to do HIGH for additions.
         MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, StructureHelpers::biomeModification);
 
+        System.out.println("Test");
 
     }
 
