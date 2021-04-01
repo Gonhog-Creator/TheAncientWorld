@@ -94,7 +94,7 @@ public class TheAncientWorld
         // The comments for BiomeLoadingEvent and StructureSpawnListGatherEvent says to do HIGH for additions.
         MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, StructureHelpers::biomeModification);
 
-        System.out.println("Test");
+        System.out.println("Test_1");
 
     }
 
@@ -128,12 +128,12 @@ public class TheAncientWorld
                 // Pre-caution in case a mod makes the structure map immutable like datapacks do.
                 if(structureMap instanceof ImmutableMap){
                     Map<Structure<?>, StructureSeparationSettings> tempMap = new HashMap<>(structureMap);
-                    tempMap.put(RegistryHandler.FABLEHAVEN.get(), DimensionStructuresSettings.field_236191_b_.get(RegistryHandler.FABLEHAVEN.get()));
+                    //tempMap.put(RegistryHandler.FABLEHAVEN.get(), DimensionStructuresSettings.field_236191_b_.get(RegistryHandler.FABLEHAVEN.get()));
 
                     settings.getValue().getStructures().field_236193_d_ = tempMap;
                 }
                 else {
-                    structureMap.put(RegistryHandler.FABLEHAVEN.get(), DimensionStructuresSettings.field_236191_b_.get(RegistryHandler.FABLEHAVEN.get()));
+                    //structureMap.put(RegistryHandler.FABLEHAVEN.get(), DimensionStructuresSettings.field_236191_b_.get(RegistryHandler.FABLEHAVEN.get()));
                 }
             });
         });

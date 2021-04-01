@@ -197,6 +197,6 @@ public class RegistryHandler {
 
     //Structures
 
-    public static final RegistryObject<Structure<NoFeatureConfig>> FABLEHAVEN = STRUCTURES.register("fablehaven", () -> (new FablehavenStructure(NoFeatureConfig.field_236558_a_)));
+    //public static final RegistryObject<Structure<NoFeatureConfig>> FABLEHAVEN = STRUCTURES.register("fablehaven", () -> (new FablehavenStructure(NoFeatureConfig.field_236558_a_)));
 
 }

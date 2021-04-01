@@ -10,6 +10,11 @@
           "name": "theancientworld:invisibility_glove"
         },
         {
+          "type": "item",
+          "weight": 1,
+          "name": "theancientworld:bow_of_arrows"
+        },
+        {
           "type": "minecraft:empty",
           "weight": 6
         }

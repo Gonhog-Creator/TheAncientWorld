@@ -5,12 +5,12 @@
       "item": "iceandfire:dragonbone"
     },
     {
-      "item": "theancientworld:dragonbone_pestle"
+      "item": "minecraft:bowl"
     }
   ],
   "result":
   {
-    "item": "theancientworld:dragonbone_dust",
+    "item": "theancientworld:dragonbone_pestle",
     "count": 1
   }
 }
