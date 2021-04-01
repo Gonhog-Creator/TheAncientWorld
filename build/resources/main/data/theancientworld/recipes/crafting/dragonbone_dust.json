@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "theancientworld:dragonbone"
+      "item": "iceandfire:dragonbone"
     },
     {
       "item": "theancientworld:dragonbone_pestle"

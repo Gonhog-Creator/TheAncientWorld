@@ -72,7 +72,7 @@ public class TheAncientWorld
         FMLJavaModLoadingContext.get().getModEventBus().addListener(RegistryHandler::curios);
         LOGGER.info("Curio Registration Complete");
         FMLJavaModLoadingContext.get().getModEventBus().addListener(Vasilis::vasilis);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(BowOfPlenty::BowOfArrow);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(ClientSideHandler::BowOfArrow);
         MinecraftForge.EVENT_BUS.addListener(InvisibilityGlove::renderPlayerEventGlove);
         MinecraftForge.EVENT_BUS.addListener(ClientEventHandler::BowOfArrowsChat);
         MinecraftForge.EVENT_BUS.addListener(BowOfPlenty::ArrowRecharge);
