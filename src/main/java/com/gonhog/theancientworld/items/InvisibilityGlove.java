@@ -46,17 +46,6 @@ public class InvisibilityGlove extends Item {
         }
     }
 
-    @SubscribeEvent
-    public static void renderPlayerEventGlove(RenderPlayerEvent.Pre event) {
-        Entity entity = event.getEntity();
-        ItemStack gloveEquipped = ClientEventHandler.getEquippedCurios(stack -> stack.getItem() == RegistryHandler.INVISIBILITY_GLOVE.get(), (PlayerEntity) entity);
-        final boolean posX = event.getPlayer().getPosX() == event.getPlayer().lastTickPosX;
-        final boolean posY = event.getPlayer().getPosY() == event.getPlayer().lastTickPosY;
-        final boolean posZ = event.getPlayer().getPosZ() == event.getPlayer().lastTickPosZ;
-        final boolean notMoving = posX && posY && posZ;
-        event.setCanceled(!gloveEquipped.isEmpty() && notMoving);
-    }
-
     @Override
     public void addInformation(ItemStack stack, @Nullable World world, List<ITextComponent> list, ITooltipFlag flags) {
         list.add(new TranslationTextComponent("message.invisibilityglove"));

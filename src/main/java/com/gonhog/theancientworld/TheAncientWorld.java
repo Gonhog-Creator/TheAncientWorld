@@ -66,17 +66,15 @@ public class TheAncientWorld
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         LOGGER.info("Setup Complete");
+
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(ClientSetup::init);
         LOGGER.info("Client Stuff Complete");
+
         FMLJavaModLoadingContext.get().getModEventBus().addListener(RegistryHandler::curios);
         LOGGER.info("Curio Registration Complete");
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(Vasilis::vasilis);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(ClientSideHandler::BowOfArrow);
-        MinecraftForge.EVENT_BUS.addListener(InvisibilityGlove::renderPlayerEventGlove);
-        MinecraftForge.EVENT_BUS.addListener(ClientEventHandler::BowOfArrowsChat);
-        MinecraftForge.EVENT_BUS.addListener(BowOfPlenty::ArrowRecharge);
 
+        MinecraftForge.EVENT_BUS.addListener(BowOfPlenty::ArrowRecharge);
         LOGGER.info("Special Item Registration Complete");
 
         MinecraftForge.EVENT_BUS.addListener(StructureHelpers::canCustomMobSpawn);
@@ -93,9 +91,6 @@ public class TheAncientWorld
 
         // The comments for BiomeLoadingEvent and StructureSpawnListGatherEvent says to do HIGH for additions.
         MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, StructureHelpers::biomeModification);
-
-        System.out.println("Test_1");
-
     }
 
 
@@ -128,12 +123,12 @@ public class TheAncientWorld
                 // Pre-caution in case a mod makes the structure map immutable like datapacks do.
                 if(structureMap instanceof ImmutableMap){
                     Map<Structure<?>, StructureSeparationSettings> tempMap = new HashMap<>(structureMap);
-                    //tempMap.put(RegistryHandler.FABLEHAVEN.get(), DimensionStructuresSettings.field_236191_b_.get(RegistryHandler.FABLEHAVEN.get()));
+                    tempMap.put(RegistryHandler.FABLEHAVEN.get(), DimensionStructuresSettings.field_236191_b_.get(RegistryHandler.FABLEHAVEN.get()));
 
                     settings.getValue().getStructures().field_236193_d_ = tempMap;
                 }
                 else {
-                    //structureMap.put(RegistryHandler.FABLEHAVEN.get(), DimensionStructuresSettings.field_236191_b_.get(RegistryHandler.FABLEHAVEN.get()));
+                    structureMap.put(RegistryHandler.FABLEHAVEN.get(), DimensionStructuresSettings.field_236191_b_.get(RegistryHandler.FABLEHAVEN.get()));
                 }
             });
         });

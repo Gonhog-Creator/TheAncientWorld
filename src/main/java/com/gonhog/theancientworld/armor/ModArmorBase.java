@@ -77,7 +77,6 @@ public enum ModArmorBase implements IArmorMaterial {
         return this.name;
     }
 
-    @OnlyIn(Dist.CLIENT)
     @Override
     public float getToughness() {
         return this.toughness;
@@ -87,4 +86,6 @@ public enum ModArmorBase implements IArmorMaterial {
     public float getKnockbackResistance() {
         return this.knockbackResistance;
     }
+
+
 }

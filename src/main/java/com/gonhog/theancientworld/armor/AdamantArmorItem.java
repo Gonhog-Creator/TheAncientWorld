@@ -11,7 +11,7 @@ import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.world.World;
 
-public class AdamantArmorItem extends ArmorItem{
+public class AdamantArmorItem extends ArmorItem {
     public AdamantArmorItem(EquipmentSlotType slot) {
         super(ModArmorBase.ADAMANT, slot, new Item.Properties().group(TheAncientWorld.TAB).maxStackSize(1));
     }

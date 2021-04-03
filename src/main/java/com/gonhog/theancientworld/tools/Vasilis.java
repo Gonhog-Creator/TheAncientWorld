@@ -64,19 +64,9 @@ public class Vasilis extends SwordItem {
         }
     }
 
-    @SubscribeEvent
-    public static void vasilis(FMLClientSetupEvent event) {
-        ItemModelsProperties.registerProperty(RegistryHandler.VASILIS.get(), new ResourceLocation("theancientworld:vasilis"), new IItemPropertyGetter() {
-            @Override
-            public float call(ItemStack stack, @Nullable ClientWorld world, @Nullable LivingEntity entity) {
-                if (counter <= 5) {
-                    return 5;
-                } else if (counter <= 10) {
-                    return 10;
-                } else if (counter <= 15) {
-                    return 15;
-                } else return 20;
-            }
-        });
+    public static int getCounter() {
+        return counter;
     }
+
+
 }
