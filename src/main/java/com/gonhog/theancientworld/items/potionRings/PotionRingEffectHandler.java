@@ -10,12 +10,14 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Effect;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
+import org.apache.commons.lang3.tuple.ImmutableTriple;
 import top.theillusivec4.curios.api.CuriosApi;
 import top.theillusivec4.curios.api.type.capability.ICuriosItemHandler;
 import top.theillusivec4.curios.api.type.inventory.ICurioStacksHandler;
 
 import java.util.Objects;
 import java.util.Optional;
+import java.util.function.Predicate;
 
 public class PotionRingEffectHandler {
 
@@ -40,7 +42,7 @@ public class PotionRingEffectHandler {
         Optional<ICurioStacksHandler> stackHandler = Optional.of((handler.get().getStacksHandler("ring").get()));
         Item ring1 = stackHandler.get().getStacks().getStackInSlot(0).getItem();
         Item ring2 = stackHandler.get().getStacks().getStackInSlot(1).getItem();
-        ItemStack ringEquipped = ClientEventHandler.getEquippedCurios(stack -> stack.getItem() == ring, (PlayerEntity) entity);
+        ItemStack ringEquipped = PotionRingEffectHandler.getEquippedCurios(stack -> stack.getItem() == ring, (PlayerEntity) entity);
 
         if (ring1 == ring && ring2 == ring) {
             return 2;
@@ -48,4 +50,10 @@ public class PotionRingEffectHandler {
             return 1;
         } else return 0;
     }
+
+    public static ItemStack getEquippedCurios(Predicate<ItemStack> predicate, PlayerEntity player) {
+        Optional<ItemStack> stack = CuriosApi.getCuriosHelper().findEquippedCurio(predicate, player).map(ImmutableTriple::getRight);
+        return stack.orElse(ItemStack.EMPTY);
+    }
 }
+

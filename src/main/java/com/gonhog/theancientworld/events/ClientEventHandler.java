@@ -1,5 +1,6 @@
 package com.gonhog.theancientworld.events;
 
+import com.gonhog.theancientworld.items.potionRings.PotionRingEffectHandler;
 import com.gonhog.theancientworld.tools.BowOfPlenty;
 import com.gonhog.theancientworld.tools.Vasilis;
 import com.gonhog.theancientworld.util.RegistryHandler;
@@ -30,10 +31,7 @@ import java.util.function.Predicate;
 @Mod.EventBusSubscriber(modid = "theancientworld", bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
 public class ClientEventHandler {
 
-    public static ItemStack getEquippedCurios(Predicate<ItemStack> predicate, PlayerEntity player) {
-        Optional<ItemStack> stack = CuriosApi.getCuriosHelper().findEquippedCurio(predicate, player).map(ImmutableTriple::getRight);
-        return stack.orElse(ItemStack.EMPTY);
-    }
+
 
     @SubscribeEvent
     public static void BowOfArrowsChat(ServerChatEvent event) {
@@ -90,7 +88,7 @@ public class ClientEventHandler {
     @SubscribeEvent
     public static void renderPlayerEventGlove(RenderPlayerEvent.Pre event) {
         Entity entity = event.getEntity();
-        ItemStack gloveEquipped = ClientEventHandler.getEquippedCurios(stack -> stack.getItem() == RegistryHandler.INVISIBILITY_GLOVE.get(), (PlayerEntity) entity);
+        ItemStack gloveEquipped = PotionRingEffectHandler.getEquippedCurios(stack -> stack.getItem() == RegistryHandler.INVISIBILITY_GLOVE.get(), (PlayerEntity) entity);
         final boolean posX = event.getPlayer().getPosX() == event.getPlayer().lastTickPosX;
         final boolean posY = event.getPlayer().getPosY() == event.getPlayer().lastTickPosY;
         final boolean posZ = event.getPlayer().getPosZ() == event.getPlayer().lastTickPosZ;

@@ -2,6 +2,7 @@ package com.gonhog.theancientworld.items;
 
 import com.gonhog.theancientworld.TheAncientWorld;
 import com.gonhog.theancientworld.events.ClientEventHandler;
+import com.gonhog.theancientworld.items.potionRings.PotionRingEffectHandler;
 import com.gonhog.theancientworld.util.RegistryHandler;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
@@ -38,7 +39,7 @@ public class InvisibilityGlove extends Item {
         final boolean posZ = entity.getPosZ() == entity.lastTickPosZ;
 
         final boolean notMoving = posX && posZ && posY;
-        ItemStack gloveEquipped = ClientEventHandler.getEquippedCurios(stack -> stack.getItem() == RegistryHandler.INVISIBILITY_GLOVE.get(), (PlayerEntity) entity);
+        ItemStack gloveEquipped = PotionRingEffectHandler.getEquippedCurios(stack -> stack.getItem() == RegistryHandler.INVISIBILITY_GLOVE.get(), (PlayerEntity) entity);
         if (!world.isRemote) {
             if (!gloveEquipped.isEmpty() && notMoving) {
                 ((PlayerEntity) entity).addPotionEffect(new EffectInstance(Effects.INVISIBILITY, 5, 0, true, true));
