@@ -95,6 +95,7 @@ public class RegistryHandler {
     //Items
     public static final RegistryObject<Item> ADAMANT_PLATE = ITEMS.register("adamant_plate", ItemBase::new);
     public static final RegistryObject<Item> DRAGONBONE_PESTLE = ITEMS.register("dragonbone_pestle", () -> new MortarAndPestle(new Item.Properties()));
+    public static final RegistryObject<Item> BONE_PESTLE = ITEMS.register("bone_pestle", () -> new MortarAndPestle(new Item.Properties()));
     public static final RegistryObject<Item> DRAGONBONE = ITEMS.register("dragonbone", ItemBase::new);
     public static final RegistryObject<Item> DRAGONBONE_DUST = ITEMS.register("dragonbone_dust", ItemBase::new);
     public static final RegistryObject<Item> INVISIBILITY_GLOVE = ITEMS.register("invisibility_glove", () -> new InvisibilityGlove(new Item.Properties()));

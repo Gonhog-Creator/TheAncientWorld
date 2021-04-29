@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:bone"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result":
+  {
+    "item": "theancientworld:bone_pestle",
+    "count": 1
+  }
+}

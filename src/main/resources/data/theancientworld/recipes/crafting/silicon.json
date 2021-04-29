@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:sand"
+    },
+    {
+      "item": "theancientworld:bone_pestle"
+    }
+  ],
+  "result":
+  {
+    "item": "appliedenergistics2:silicon",
+    "count": 1
+  }
+}
