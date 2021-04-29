@@ -1,53 +1,27 @@
--------------------------------------------
-Source installation information for modders
--------------------------------------------
-This code follows the Minecraft Forge installation methodology. It will apply
-some small patches to the vanilla MCP source code, giving you and it access 
-to some of the data and functions you need to build a successful mod.
+This mod is currently a practice mod for me, learning to code and add things I want to the game. I have some ideas about a future 1.0, but they're far off. Otherwise, this is a mod requested by people of reddit to add some items to the game that would be missing from a 1.16 RLCraft modpack.
 
-Note also that the patches are built against "unrenamed" MCP source code (aka
-srgnames) - this means that you will not be able to read them directly against
-normal code.
+Feel free to leave suggestions and requests for items! I will try and get to them whenever I can, and implement things as I learn to code!
 
-Source pack installation information:
 
-Standalone source installation
-==============================
 
-See the Forge Documentation online for more detailed instructions:
-http://mcforge.readthedocs.io/en/latest/gettingstarted/
+Currently, this mod adds:
 
-Step 1: Open your command-line and browse to the folder where you extracted the zip file.
+- All rings of potion (Haste, Resistance, Speed, Strength, Regen, Jump Boost, and Night Vision) along with crafting materials
 
-Step 2: You're left with a choice.
-If you prefer to use Eclipse:
-1. Run the following command: "gradlew genEclipseRuns" (./gradlew genEclipseRuns if you are on Mac/Linux)
-2. Open Eclipse, Import > Existing Gradle Project > Select Folder 
-   or run "gradlew eclipse" to generate the project.
-(Current Issue)
-4. Open Project > Run/Debug Settings > Edit runClient and runServer > Environment
-5. Edit MOD_CLASSES to show [modid]%%[Path]; 2 times rather then the generated 4.
+- Dragon Eye from trinkets and Baubles (More things to come soon, probably)
 
-If you prefer to use IntelliJ:
-1. Open IDEA, and import project.
-2. Select your build.gradle file and have it import.
-3. Run the following command: "gradlew genIntellijRuns" (./gradlew genIntellijRuns if you are on Mac/Linux)
-4. Refresh the Gradle Project in IDEA if required.
+- Adamant Armor, to DEFINETELY be reworked, since it's too easy to get and stronger than Ice and Fire's dragonsteel
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can run "gradlew --refresh-dependencies" to refresh the local cache. "gradlew clean" to reset everything {this does not affect your code} and then start the processs again.
+- Adds 9 new entities and one new structure (Wraith, Nipsie, Centaur, Stayr, Unicorn, Astrid, Dirt and Wood Golems, and Deer)
 
-Should it still not work, 
-Refer to #ForgeGradle on EsperNet for more information about the gradle environment.
-or the Forge Project Discord discord.gg/UvedJ9m
+- Adds two new Legendary Swords
 
-Forge source installation
-=========================
-MinecraftForge ships with this code and installs it as part of the forge
-installation process, no further action is required on your part.
+- Adds the Bow of Plenty and the Invisibility Glove -both can only be found in Stronghold libraries
 
-LexManos' Install Video
-=======================
-https://www.youtube.com/watch?v=8VEdtQLuLO0&feature=youtu.be
+      - For the Bow of Plenty, simply type in chat a number between 1 and 100 to shoot that many arrows at a time! You have a limit of 100 arrows per day, so use them wisely.
 
-For more details update more often refer to the Forge Forums:
-http://www.minecraftforge.net/forum/index.php/topic,14048.0.html
+
+
+All ideas and textures for potion rings come from the original mod, (made by Vazkii_) and all credit goes to him.  This is a modified version by me, Gonhog.
+
+All Ideas and textures for some items come from "Trinkets and Baubles", made by XzeroAir, and all credit goes to him. This is a modified version made by me, Gonhog.

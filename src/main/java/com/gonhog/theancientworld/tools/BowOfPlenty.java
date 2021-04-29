@@ -114,7 +114,7 @@ public class BowOfPlenty extends BowItem {
     public void inventoryTick(ItemStack stack, World world, Entity entity, int i, boolean flag) {
         CompoundNBT nbt = stack.getOrCreateTag();
         if (!nbt.contains("arrowsLeft")) {
-            nbt.putInt("arrowsLeft", 300);
+            nbt.putInt("arrowsLeft", 100);
         }
         if (!nbt.contains("arrowsShooting")) {
             nbt.putInt("arrowsShooting", 1);
@@ -123,8 +123,8 @@ public class BowOfPlenty extends BowItem {
         int getArrowsLeft = nbt.getInt("arrowsLeft");
         int getArrowsShooting = nbt.getInt("arrowsShooting");
 
-        if (arrowsRecharge && !(getArrowsLeft == 300)) {
-            nbt.putInt("arrowsLeft", 300);
+        if (arrowsRecharge && !(getArrowsLeft == 100)) {
+            nbt.putInt("arrowsLeft", 100);
         }
         if (getArrowsShooting == 0) {
             nbt.putInt("arrowsShooting", 1);

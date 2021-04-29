@@ -49,7 +49,7 @@ public class ClientEventHandler {
         }
         if (numeric) {
             int messageInt = Integer.parseInt(message);
-            if (messageInt > 0 && messageInt <= 300) {
+            if (messageInt > 0 && messageInt <= 100) {
                 if (mainHand == bow || offHand == bow) {
                     BowOfPlenty.setArrows(messageInt, event.getPlayer().getHeldItem(hand).getStack());
                 }
