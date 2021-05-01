@@ -42,7 +42,7 @@ public class InvisibilityGlove extends Item {
         ItemStack gloveEquipped = PotionRingEffectHandler.getEquippedCurios(stack -> stack.getItem() == RegistryHandler.INVISIBILITY_GLOVE.get(), (PlayerEntity) entity);
         if (!world.isRemote) {
             if (!gloveEquipped.isEmpty() && notMoving) {
-                ((PlayerEntity) entity).addPotionEffect(new EffectInstance(Effects.INVISIBILITY, 5, 0, true, true));
+                //((PlayerEntity) entity).addPotionEffect(new EffectInstance(Effects.INVISIBILITY, 5, 0, true, true));
             }
         }
     }

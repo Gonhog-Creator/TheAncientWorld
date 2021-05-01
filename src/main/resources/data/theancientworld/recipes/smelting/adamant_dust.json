@@ -3,7 +3,7 @@
   "ingredient": {
     "item": "theancientworld:dragonbone_dust"
   },
-  "result": "theancientworld:adamant_plate",
+  "result": "theancientworld:adamant_dust",
   "experience": 10.0,
   "cookingtime": 200
 }

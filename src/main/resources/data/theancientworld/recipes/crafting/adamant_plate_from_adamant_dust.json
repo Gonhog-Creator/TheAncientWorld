@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "aaa",
+    "asa",
+    "aaa"
+  ],
+  "key":
+  {
+    "a":
+    {
+      "item": "theancientworld:adamant_dust"
+    },
+    "s":
+    {
+      "item": "minecraft:diamond"
+    }
+  },
+
+  "result":
+  {
+    "item": "theancientworld:adamant_plate",
+    "count": 1
+  }
+}

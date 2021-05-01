@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "theancientworld:dragonbone_dust"
-  },
-  "result": "theancientworld:adamant_plate",
-  "experience": 10.0,
-  "cookingtime": 200
-}

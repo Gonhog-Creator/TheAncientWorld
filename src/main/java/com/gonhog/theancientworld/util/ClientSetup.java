@@ -14,6 +14,7 @@ import com.gonhog.theancientworld.entities.wood_golem.WoodGolemRender;
 import com.gonhog.theancientworld.entities.wraith.WraithRender;
 import com.gonhog.theancientworld.events.ClientEventHandler;
 import com.gonhog.theancientworld.screens.TestBlockScreen;
+import com.gonhog.theancientworld.tools.Vasilis;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -38,8 +39,9 @@ public class ClientSetup {
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.DEER.get(), DeerRender::new);
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.WRAITH.get(), WraithRender::new);
 
-        MinecraftForge.EVENT_BUS.addListener(ClientEventHandler::ItemProperties);
+
         MinecraftForge.EVENT_BUS.addListener(ClientEventHandler::renderPlayerEventGlove);
+        ClientEventHandler.ItemProperties(event);
         MinecraftForge.EVENT_BUS.addListener(ClientEventHandler::BowOfArrowsChat);
 
     }

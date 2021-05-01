@@ -117,6 +117,8 @@ public class RegistryHandler {
     public static final RegistryObject<Item> TAURAN_HOOF = ITEMS.register("tauran_hoof", ItemBase::new);
     public static final RegistryObject<Item> TAURAN_LEATHER = ITEMS.register("tauran_leather", ItemBase::new);
     public static final RegistryObject<Item> DEER_ANTLER = ITEMS.register("deer_antler", ItemBase::new);
+    public static final RegistryObject<Item> ADAMANT_DUST = ITEMS.register("adamant_dust", ItemBase::new);
+
 
 
 

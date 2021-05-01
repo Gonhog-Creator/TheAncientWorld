@@ -102,6 +102,7 @@ public class BowOfPlenty extends BowItem {
         }
     }
 
+    /*
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
         if (stack.hasTag()) {
@@ -109,6 +110,8 @@ public class BowOfPlenty extends BowItem {
             tooltip.add(new StringTextComponent(Integer.toString(stack.getTag().getInt("arrowsLeft"))));
         }
     }
+
+     */
 
 
     public void inventoryTick(ItemStack stack, World world, Entity entity, int i, boolean flag) {
